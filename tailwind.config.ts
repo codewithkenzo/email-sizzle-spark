@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -59,7 +58,7 @@ export default {
         }
       },
       fontFamily: {
-        mono: ['JetBrains Mono', 'monospace'],
+        iosevka: ['Iosevka', 'monospace'],
       },
       keyframes: {
         'accordion-down': {

@@ -5,25 +5,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 262 83% 58%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 262 83.3% 57.8%;
+    --background: 220 26% 14%;
+    --foreground: 60 30% 96%;
+    --card: 220 26% 14%;
+    --card-foreground: 60 30% 96%;
+    --popover: 220 26% 14%;
+    --popover-foreground: 60 30% 96%;
+    --primary: 343 88% 66%;
+    --primary-foreground: 60 30% 96%;
+    --secondary: 100 18% 41%;
+    --secondary-foreground: 60 30% 96%;
+    --muted: 215 25% 24%;
+    --muted-foreground: 60 30% 96%;
+    --accent: 142 71% 45%;
+    --accent-foreground: 60 30% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 60 30% 96%;
+    --border: 215 25% 24%;
+    --input: 215 25% 24%;
+    --ring: 343 88% 66%;
   }
 }
 
@@ -32,26 +32,37 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-mono;
-    font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv02" on,
-      "cv03" on, "cv04" on;
+    @apply bg-background text-foreground font-iosevka antialiased;
   }
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-teal-400;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#fb4934] to-[#8ec07c];
+}
+
+.nav-link {
+  @apply relative px-4 py-2 text-foreground/80 transition-colors duration-300 hover:text-foreground
+    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent
+    after:transition-all after:duration-500 hover:after:w-full;
 }
 
 .feature-card {
-  @apply relative overflow-hidden rounded-xl border bg-white/50 p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  @apply relative overflow-hidden rounded-xl border border-muted bg-card/50 p-6 backdrop-blur-sm
+    transition-all duration-500 hover:shadow-lg hover:-translate-y-1 hover:border-accent/50;
 }
 
 .button-glow {
-  @apply relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-teal-400 p-0.5 transition-all duration-300 hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
+  @apply relative inline-flex items-center justify-center overflow-hidden rounded-lg
+    bg-gradient-to-br from-[#fb4934] to-[#8ec07c] p-0.5 transition-all duration-500
+    hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-[#fb4934] focus:ring-offset-2;
 }
 
 .circle-pattern {
   @apply absolute pointer-events-none;
-  background-image: radial-gradient(circle at center, theme('colors.purple.200') 0%, transparent 70%);
-  opacity: 0.1;
+  background-image: radial-gradient(circle at center, rgba(251, 73, 52, 0.1) 0%, transparent 70%);
+}
+
+.testimonial-card {
+  @apply relative overflow-hidden rounded-xl border border-muted bg-card/50 p-8
+    backdrop-blur-sm transition-all duration-500 hover:shadow-lg hover:border-accent/50;
 }
