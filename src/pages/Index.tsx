@@ -1,4 +1,3 @@
-
 import { ArrowRight, Mail, Send, Zap, Star, Shield, Sparkles } from 'lucide-react';
 
 const Index = () => {
@@ -10,29 +9,39 @@ const Index = () => {
           <div className="flex items-center justify-between h-16 px-4">
             <div className="flex items-center">
               <a href="/" className="flex items-center gap-2">
-                <Mail className="w-6 h-6 text-accent" />
-                <span className="text-xl font-bold">MailSync</span>
+                <Mail className="w-5 h-5 text-accent" />
+                <span className="text-lg font-bold">MailSync</span>
               </a>
             </div>
             
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               <a href="#features" className="nav-link">Features</a>
               <a href="#pricing" className="nav-link">Pricing</a>
               <a href="#testimonials" className="nav-link">Testimonials</a>
               <a href="#contact" className="nav-link">Contact</a>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <button className="button-glow">
-                <span className="relative px-4 py-2 bg-background rounded-md text-foreground flex items-center gap-2">
+                <span className="nav-button">
                   Get Started
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </button>
             </div>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Button */}
+      <div className="fixed top-4 right-4 md:hidden z-50">
+        <button className="button-glow">
+          <span className="nav-button">
+            Menu
+            <ArrowRight className="w-3.5 h-3.5" />
+          </span>
+        </button>
+      </div>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
