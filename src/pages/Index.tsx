@@ -1,4 +1,5 @@
 import { ArrowRight, Mail, Send, Zap, Star, Shield, Sparkles } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -22,12 +23,12 @@ const Index = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <button className="button-glow">
+              <Link to="/dashboard" className="button-glow">
                 <span className="nav-button">
                   Get Started
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -35,12 +36,12 @@ const Index = () => {
 
       {/* Mobile Menu Button */}
       <div className="fixed top-4 right-4 md:hidden z-50">
-        <button className="button-glow">
+        <Link to="/dashboard" className="button-glow">
           <span className="nav-button">
             Menu
             <ArrowRight className="w-3.5 h-3.5" />
           </span>
-        </button>
+        </Link>
       </div>
 
       {/* Hero Section */}
@@ -67,12 +68,12 @@ const Index = () => {
 
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-[#fb4934] to-[#8ec07c] rounded-lg blur opacity-30 animate-pulse"></div>
-              <button className="button-glow group">
+              <Link to="/dashboard" className="button-glow group">
                 <span className="relative px-6 py-3 bg-background rounded-md text-foreground flex items-center gap-2">
                   Get Started Free
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -157,12 +158,12 @@ const Index = () => {
                   Join thousands of companies that trust MailSync Pro for their critical email operations.
                 </p>
                 
-                <button className="button-glow group">
+                <Link to="/dashboard" className="button-glow group">
                   <span className="relative px-8 py-3 bg-background rounded-md text-foreground flex items-center gap-2">
                     Start Building Now
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
