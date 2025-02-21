@@ -82,5 +82,18 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "**URL**: https://lovable.dev/projects/69547f0a-9e59-4998-b328-dd88f782bc6f",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewithkenzo/email-sizzle-spark.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codewithkenzo/email-sizzle-spark/issues"
+  },
+  "homepage": "https://github.com/codewithkenzo/email-sizzle-spark#readme"
 }
