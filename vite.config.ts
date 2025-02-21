@@ -19,4 +19,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      external: [
+        '@supabase/auth-ui-react',
+        '@supabase/auth-ui-shared',
+        '@supabase/supabase-js'
+      ]
+    }
+  }
 }));
